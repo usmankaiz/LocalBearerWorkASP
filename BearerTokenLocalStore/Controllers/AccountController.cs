@@ -55,7 +55,7 @@ namespace BearerTokenLocalStore.Controllers
                 string url = "Https://" + HttpContext.Current.Request.Url.Host + "/token";
                 if (HttpContext.Current.Request.Url.Host.Contains("localhost"))
                 {
-                    url = "http://localhost:44324/token";
+                    url = "https://localhost:44324/token";
                 }
                 HttpResponseMessage response = await client.PostAsync(url, new FormUrlEncodedContent(requestParams));
                 if (response.IsSuccessStatusCode)
